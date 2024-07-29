@@ -45,7 +45,7 @@ function searchFormData(e) {
 
 //functionality for Offer. methods fillSearchForm, selectRoomType, findRoom
 
-//Use this code box only while testing functionality in your custom branch.
+//Use this code only while testing functionality in your custom branch.
 //changeContent('search-result-form-content');
 
 document.querySelector('#search-back-btn').addEventListener('click', (e) => fillSearchForm(e));
@@ -87,7 +87,7 @@ function findRoom(e) {
 
 }
 
-//Use this code box only while testing functionality in your custom branch.
+//Use this code only while testing functionality in your custom branch.
 //changeContent('guest-details-form-content');
 
 document.querySelector('#guest-details-back-btn').addEventListener('click', (e) => fillRoomForm(e));
@@ -124,4 +124,22 @@ function fillConfirmReservationData(customReservation) {
     document.querySelector('.confirm-reservation #guest-room-type').textContent = `Room Type: ${customReservation.roomType}`;
     document.querySelector('.confirm-reservation #guest-data-in').textContent = `Date-in: ${customReservation.startDate}`;
     document.querySelector('.confirm-reservation #guest-data-out').textContent = `Date-out: ${customReservation.endDate}`;
+}
+
+//Use this code only while testing functionality in your custom branch.
+//changeContent('confirm-reservation-content');
+
+document.querySelector('#confirm-back-btn').addEventListener('click', (e) => getBackToPersonalData(e));
+
+function getBackToPersonalData(e) {
+    e.preventDefault();
+    changeContent('guest-details-form-content');
+}
+
+
+document.querySelector('#confirm-reservation').addEventListener('click', (e) => showThanksPage(e));
+
+function showThanksPage(e) {
+    e.preventDefault();
+    changeContent('thank-you-content');
 }
